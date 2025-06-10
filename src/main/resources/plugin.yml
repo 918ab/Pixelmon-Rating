@@ -1,0 +1,4 @@
+name: Pixelmon-Rating
+version: '${project.version}'
+main: main.pixelmonrating.Pixelmo_Rating
+api-version: '1.16'

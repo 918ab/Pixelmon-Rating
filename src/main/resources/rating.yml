@@ -1,0 +1,11 @@
+#Rating:
+#  test:
+#    tier:
+#      Bronze : 1000
+#    win:
+#      min : 10
+#      max : 30
+#    lose:
+#      min : -10
+#      max : -30
+#    battle-location:
