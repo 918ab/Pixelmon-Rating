@@ -1,4 +1,7 @@
 name: Pixelmon-Rating
 version: '${project.version}'
-main: main.pixelmonrating.Pixelmo_Rating
+main: main.pixelmonrating.Pixelmon_Rating
 api-version: '1.16'
+commands:
+  레이팅:
+    aliases: rating

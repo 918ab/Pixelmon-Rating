@@ -1,8 +1,6 @@
-package main.randomchest.Static;
-import org.bukkit.Bukkit;
+package main.pixelmonrating.Util;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
-import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
@@ -50,8 +48,17 @@ public class ItemBuilder {
         itemStack.setItemMeta(itemMeta);
         return itemStack;
     }
-
-
+    public ItemBuilder setSkullOwner(OfflinePlayer offlinePlayer) {
+        if (itemStack.getType() != Material.PLAYER_HEAD) {
+            itemStack.setType(Material.PLAYER_HEAD);
+        }
+        if (itemMeta instanceof SkullMeta) {
+            SkullMeta skullMeta = (SkullMeta) itemMeta;
+            skullMeta.setOwningPlayer(offlinePlayer);
+            itemStack.setItemMeta(skullMeta);
+        }
+        return this;
+    }
 //    ItemStack sword = new ItemBuilder(Material.DIAMOND_SWORD)
 //            .setDisplayName("강력한 검")
 //            .addLore("이 검은 매우 강력합니다.")
